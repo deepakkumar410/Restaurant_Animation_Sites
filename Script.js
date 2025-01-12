@@ -36,32 +36,48 @@ const menuAnimation = () => {
 menuAnimation();
 
 const section1 = () => {
-  let tl1 = gsap.timeline()
-  tl1.from("nav h1,nav i", {
-    y: -30,
-    opacity: 0,
-    delay:0.7,
-    duration:0.8
-  },"r");
+  let tl1 = gsap.timeline();
+  tl1.from(
+    "nav h1,nav i",
+    {
+      y: -30,
+      opacity: 0,
+      delay: 0.7,
+      duration: 0.8,
+    },
+    "r"
+  );
 
-  tl1.from(".left button",{
-    scale:0,
-    opacity:0,  delay:0.7,
-    duration:0.8
-   
-  },"r")
-  tl1.from(".left h1", {
-    x: -50,
-    opacity: 0,  delay:0.7,
-    duration:0.8  
-    
-  },"r");
-  tl1.from(".right img", {
-    x: 50,
-    opacity: 0,  delay:0.7,
-    duration:0.8
-
-  },"r");
+  tl1.from(
+    ".left button",
+    {
+      scale: 0,
+      opacity: 0,
+      delay: 0.7,
+      duration: 0.8,
+    },
+    "r"
+  );
+  tl1.from(
+    ".left h1",
+    {
+      x: -50,
+      opacity: 0,
+      delay: 0.7,
+      duration: 0.8,
+    },
+    "r"
+  );
+  tl1.from(
+    ".right img",
+    {
+      x: 50,
+      opacity: 0,
+      delay: 0.7,
+      duration: 0.8,
+    },
+    "r"
+  );
 };
 section1();
 
@@ -136,7 +152,7 @@ const section3 = () => {
 };
 section3();
 
-const section4 =()=>{
+const section4 = () => {
   let tl4 = gsap.timeline({
     scrollTrigger: {
       trigger: ".Section-part4",
@@ -147,7 +163,7 @@ const section4 =()=>{
       scrub: 2,
     },
   });
-  
+
   tl4.from(
     ".test-text h2,.test-text p",
     {
@@ -162,58 +178,93 @@ const section4 =()=>{
       scale: 0,
       opacity: 0,
       rotate: 180,
-      
     },
     "p"
   );
-  tl4.from(".food-info h2, .food-info p",{
-    y: 150,
-    opacity:0
-  },"p")
-  tl4.from(".egg-detail p",{
-    x : 50,
-    opacity:0,
-    scale : 0.5,
-  },"p")
-  tl4.from(".sec-food-box-Details img",{
-    x : 150,
-    scale: 0.2,
-    rotate : 180,
-    opacity:0
-  },"p")
-  
-  tl4.from(".phone-menu i",{
-    y: -30,
-    opacity: 0,
-  },"p")
-  
-  tl4.from(".phone2 img",{
-  opacity:0,
-    ease: "bounce.out",
-    y: -50,
-  },"p")
-  
-  tl4.from(".sec-egg-detail h1, .sec-egg-detail p",{
-    scale:0,
-    opacity:0
-  },"p")
-  
-  tl4.from(".add-to-cart button",{
-    scale:0,
-    opacity:0
-  },"p")
-  
-  tl4.from(".app h1, .app p",{
-    x: 100,
-    opacity:0
-  },"p")
-  tl4.from(".app-img img",{
-    scale:0,
-    opacity:0
-  },"p")
-}
+  tl4.from(
+    ".food-info h2, .food-info p",
+    {
+      y: 150,
+      opacity: 0,
+    },
+    "p"
+  );
+  tl4.from(
+    ".egg-detail p",
+    {
+      x: 50,
+      opacity: 0,
+      scale: 0.5,
+    },
+    "p"
+  );
+  tl4.from(
+    ".sec-food-box-Details img",
+    {
+      x: 150,
+      scale: 0.2,
+      rotate: 180,
+      opacity: 0,
+    },
+    "p"
+  );
+
+  tl4.from(
+    ".phone-menu i",
+    {
+      y: -30,
+      opacity: 0,
+    },
+    "p"
+  );
+
+  tl4.from(
+    ".phone2 img",
+    {
+      opacity: 0,
+      ease: "bounce.out",
+      y: -50,
+    },
+    "p"
+  );
+
+  tl4.from(
+    ".sec-egg-detail h1, .sec-egg-detail p",
+    {
+      scale: 0,
+      opacity: 0,
+    },
+    "p"
+  );
+
+  tl4.from(
+    ".add-to-cart button",
+    {
+      scale: 0,
+      opacity: 0,
+    },
+    "p"
+  );
+
+  tl4.from(
+    ".app h1, .app p",
+    {
+      x: 100,
+      opacity: 0,
+    },
+    "p"
+  );
+  tl4.from(
+    ".app-img img",
+    {
+      scale: 0,
+      opacity: 0,
+    },
+    "p"
+  );
+};
 section4();
-const footerAnimation = ()=>{
+const footerAnimation = () => {
   let tl5 = gsap.timeline({
     scrollTrigger: {
       trigger: ".footer-container",
@@ -221,18 +272,29 @@ const footerAnimation = ()=>{
       // markers: true,
       start: "top 60%",
       end: "top 0%",
-      scrub: 2,
+      scrub: 3,
     },
-  })
-  
-  tl5.from(".footer-container h1, .footer-container p,.line",{
-    y:30 ,
-    opacity:0,
-    stagger: 0.1
-  },"k")
-  tl5.from(".footer-container button",{
-    scale:0.5,
-    opacity:0
-  },"k")
-}
+  });
+
+  tl5.from(
+    ".footer-container h1, .footer-container p,.line",
+    {
+      y: 30,
+      duration: 1,
+      opacity: 0,
+      stagger: 0.3,
+    },
+    "k"
+  );
+  tl5.from(
+    ".footer-container button",
+    {
+      scale: 0.5,
+      opacity: 0,
+      duration: 1,
+      stagger: "0.3",
+    },
+    "k"
+  );
+};
 footerAnimation();
